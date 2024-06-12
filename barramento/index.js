@@ -33,7 +33,7 @@ app.post('/eventos', async (req, res) => {
     }
     catch(e){}
   }
-  if(evento.type === 'ObservacaoCriada') {
+  if(evento.type === 'ObservacaoCriada' || 'LembreteCriado') {
     try{
       await axios.post('http://localhost:7000/eventos', evento)//classificação
     }
