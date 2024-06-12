@@ -19,12 +19,14 @@ const funcoes = {
         payload: observacao
       }
     )
+    console.log('classifiquei')
   }
 }
 
 app.post('/eventos', async (req, res) => {
   // if (funcoes[req.body.type])
   //   funcoes[req.body.type](req.body.payload)
+  console.log(`classificacao recebeu ${req.body.type}`)
   try{
     funcoes[req.body.type](req.body.payload)
   } 
